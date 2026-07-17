@@ -1,0 +1,76 @@
+body {
+      background: #EAE4D3;
+      color: #2F2F2F;
+      font-family: Georgia, serif;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background: #F5F1E8;
+      color: #2F2F2F;
+      border-bottom: 2px solid #A1866F;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    .logo { 
+      margin: 0; line-height: 1.2; 
+      text-shadow: 2px 2px 2px black;
+      
+      }
+    
+    .navbar { display: flex; gap: 15px; flex-wrap: wrap; }
+
+    a { 
+      color: #2F2F2F; 
+      padding: 6px 10px; 
+      text-decoration: none;
+      transition: 0.3s; 
+    }
+  
+    a:hover { 
+      color: #A1866F;
+      background-color: rgba(161, 134, 111, 0.15); 
+      border-radius: 10px;
+    } 
+      
+    /* Hero with graphite background - overlay made lighter */
+    main.kamb {
+      background-image: 
+        linear-gradient(rgba(234, 228, 211, 0.4), rgba(234, 228, 211, 0.4)), /* was 0.85, now 0.4 */
+        url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 90vh;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 { font-size: clamp(2rem, 6vw, 3rem); margin: 0; color: #2F2F2F; text-shadow: 0 1px 3px rgba(234,228,211,0.7);}
+    .hero p { font-size: clamp(1rem, 3vw, 1.2rem); margin: 15px 0 25px; }
+    
+    .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+    .btn {
+      background: #A1866F; color: #F5F1E8;
+      padding: 12px 24px; border-radius: 8px;
+      text-decoration: none; font-weight: bold;
+      display: inline-block;
+    }
+    .btn:hover { background: #8B7355; color: #FFFFFF; }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      header { flex-direction: column; padding: 10px; }
+    }
