@@ -45,7 +45,7 @@ body {
     main.kamb {
       background-image: 
         linear-gradient(rgba(234, 228, 211, 0.4), rgba(234, 228, 211, 0.4)), /* was 0.85, now 0.4 */
-        url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071');
+        url('hero.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
