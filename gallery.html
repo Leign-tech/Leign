@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Gift Kambuzi">
+  <meta name="keywords" content="art, drawing, pencil, graphite portrait, blezel, leign">
+  <meta name="robots" content="nofollow">
+  <meta name="description" content="this page is a graphite pencil art ordering and viewing hand drawn pencil art">
+  <title>BLEZEL ART</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+
+
+  /* GALLERY */
+  #gallery {
+    background: var(--bg);
+    padding: 80px 20px;
+  }
+  #gallery h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 50px;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .art-card {
+    background: var(--light);
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  .art-card:hover { transform: translateY(-8px); }
+  .art-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  .art-card p {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /* LIGHTBOX */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid var(--light);
+    border-radius: 8px;
+  }
+  .lightbox:target { display: flex; }
+
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 700px) {
+    header {
+      flex-direction: column;
+      padding: 15px 20px;
+      gap: 10px;
+    }
+    .navbar { justify-content: center; }
+    main.kamb { min-height: 70vh; padding: 40px 15px; }
+    .gallery-grid { gap: 20px; }
+    .art-card img { height: 250px; }
+  }
+     
+  </style>
+</head>
+<body>
+<header>
+  <h1 class="logo">BLEZEL <br />ART</h1>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section id="gallery">
+  <h2>My Pencil Works</h2>
+  <div class="gallery-grid">
+    
+    <a href="#img1" class="art-card">
+      <img src="first.jpg" alt="graphite pencil portrait">
+      <p>Portrait 1</p>
+    </a>
+
+    <a href="#img2" class="art-card">
+      <img src="second.jpg" alt="graphite pencil portrait">
+      <p>portrait 2</p>
+    </a>
+
+    <a href="#img3" class="art-card">
+      <img src="third.jpg" alt="graphite pencil portrait">
+      <p>portrait 3</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- LIGHTBOX POPUPS -->
+<div id="img1" class="lightbox">
+  <a href="gallery.html"><img src="first.jpg" alt="graphite pencil portrait"></a>
+</div>
+<div id="img2" class="lightbox">
+  <a href="gallery.html"><img src="second.jpg" alt="graphite pencil portrait"></a>
+</div>
+<div id="img3" class="lightbox">
+  <a href="gallery.html"><img src="third.jpg" alt="graphite pencil portrait"></a>
+</div>
+
+</body>
+</html>
