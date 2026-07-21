@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Gift Kambuzi">
+  <meta name="keywords" content="art, drawing, pencil, graphite portrait, blezel, leign">
+  <meta name="robots" content="nofollow">
+  <meta name="description" content="this page is a graphite pencil art ordering and viewing hand drawn pencil art">
+  <title>BLEZEL ART</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+
+
+  .about-container {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 3px solid #D4AF37; /* gold border */
+}
+
+.about-text h1 {
+  color: #D4AF37;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.about-text h2 {
+  color: #f5f5f5;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.about-text p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color:black;
+}
+
+nav .active {
+  color: #D4AF37;
+  border-bottom: 2px solid #D4AF37;
+}
+
+@media(max-width: 768px){
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+  /* GALLERY */
+  #gallery {
+    background: var(--bg);
+    padding: 80px 20px;
+  }
+  #gallery h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 50px;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .art-card {
+    background: var(--light);
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  .art-card:hover { transform: translateY(-8px); }
+  .art-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  .art-card p {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /* LIGHTBOX */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid var(--light);
+    border-radius: 8px;
+  }
+  .lightbox:target { display: flex; }
+
+
+     
+  </style>
+</head>
+<body>
+<header>
+  <h1 class="logo">BLEZEL <br />ART</h1>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+<body>
+
+  
+
+  <main class="about-container">
+    
+    <section id="gallery">
+  
+  <div class="gallery-grid">
+    
+    <a href="#img1" class="art-card">
+      <img src="web-author.jpg" alt="web-author">
+
+      <p>Web-Author</p>
+    </a>
+      </div>
+</section>
+
+
+
+<!-- LIGHTBOX POPUPS -->
+<div id="img1" class="lightbox">
+  <a href="contact.html"><img src="web-author.jpg" alt="web-author"></a>
+</div>
+
+  <div class="about-text">
+      <h1>Contact Website Author</h1>
+      <h2>GIFT KAMBUZI.</h2>
+      <p>-LEIGN-</p>
+
+      <a href="https://wa.me/265888105808" class="btn">Contact Web-Author</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 LEIGN-TECH. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
